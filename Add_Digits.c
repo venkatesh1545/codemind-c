@@ -1,21 +1,25 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int n,r,dc,sum;
+    int n,i,sum=0,r;
     scanf("%d",&n);
-    dc=log10(n)+1;
-    while(dc>=2)
+    do
     {
         sum=0;
-        while(n!=0)
+        do
         {
             r=n%10;
             sum=sum+r;
             n=n/10;
-        }
-        n=sum;
-        dc=log10(sum)+1;
+         }
+         while(n!=0);
+         {
+            n=sum;
+         }
+    }     
+    while(sum/10!=0);
+    {
+        printf("%d",sum);
     }
-    printf("%d",sum);
+    return 0;
 }
