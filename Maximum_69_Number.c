@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,r=0,s=0,cnt=0;
+    int n,r=0,s=0,c=0;
     scanf("%d",&n);
     while(n)
     {
@@ -10,10 +10,10 @@ int main()
     }
     while(r)
     {
-        if(r%10==6 && cnt==0)
+        if(r%10==6 &&c==0)
         {
             s=(s*10)+9;
-            cnt++;
+            c++;
         }
         else
         {
