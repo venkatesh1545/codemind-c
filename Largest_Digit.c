@@ -1,16 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int n,sum=0,r=0;
+    int n,q,r,s=0,max;
     scanf("%d",&n);
-    while(n>0)
+    q=n;
+    max=0;
+    while(q!=0)
     {
-    	r=n%10;
-    	if(r>sum)
-    	{
-    		sum=r;
-		}
-		n=n/10;
-	}
-    printf("%d",sum);
+        r=q%10;
+        if(r>max)
+        {
+            max=r;
+        }
+        q=q/10;
+    }
+    printf("%d",max);
 }
+
