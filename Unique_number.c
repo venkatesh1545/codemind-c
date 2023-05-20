@@ -3,7 +3,7 @@ int main()
 {
     int a[10]={0},n,r;
     scanf("%d",&n);
-    while(n)
+    while(n>0)
     {
         r=n%10;
         if(a[r]==1)
@@ -16,7 +16,7 @@ int main()
         }
         n=n/10;
     }
-    if(n)
+    if(n>0)
     {
         printf("Not Unique Number");
     }
