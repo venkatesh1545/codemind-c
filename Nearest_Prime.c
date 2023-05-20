@@ -1,54 +1,67 @@
 #include<stdio.h>
+int large(int k)
+{
+    int b,i,s,r,lar;
+    for(b=k;b>=0;b++)
+    {
+        s=0;
+        for(i=1;i<=b;i++)
+        {
+            if(b%i==0)
+            {
+                s++;
+            }
+        }
+        if(s==2)
+        {
+            lar=b;
+            break;
+        }
+    }
+    return lar;
+}
+int small(int k)
+{
+    int b,i,s,r,sma;
+    for(b=k;b>=0;b--)
+    {
+        s=0;
+        for(i=1;i<=b;i++)
+        {
+            if(b%i==0)
+            {
+                s++;
+            }
+        }
+        if(s==2)
+        {
+            sma=b;
+            break;
+        }
+    }
+    return sma;
+}
 int main()
 {
-	int t,d,r,i,n,m,c=0,j;
-	scanf("%d",&n);
-	for(r=0;r<n;r++)
-	{
-		scanf("%d",&m);
-		for(i=m;i>2;i--)
-		{
-			c=0;
-			for(j=2;j<i;j++)
-			{
-				if(i%j==0)
-				{
-					c=1;
-					break;
-				}
-			}
-			if(c==0)
-			{
-				t=i;
-				break;
-			}
-		}
-		for(i=m;i<m+100;i++)
-		{
-			c=0;
-			for(j=2;j<i;j++)
-			{
-				if(i%j==0)
-				{
-					c=1;
-					break;
-				}
-			}
-			if(c==0)
-			{
-				d=i;
-				break;
-			}
-		}
-		if((m-t)<=(d-m))
-		{
-			printf("%d
-",t);
-		}
-		else
-		{
-			printf("%d
-",d);
-		}
-	}
+    int a,b,c,d,e,f,min,i,k;
+    scanf("%d",&a);
+    for(i=1;i<=a;i++)
+    {
+        scanf("%d",&k);
+        b=small(k);
+        c=large(k);
+        f=c-k;
+        e=k-b;
+        if(e==f)
+        {
+            printf("%d
+",b);
+        }
+        else
+        {
+            min=(e<f)?b:c;
+            printf("%d
+",min);
+        }
+    }
 }
