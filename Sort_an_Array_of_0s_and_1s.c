@@ -1,25 +1,17 @@
-#include<stdio.h>
+#include<bits/stdc++.h>
+using namespace std;
 int main()
 {
-    int n,i;
-    scanf("%d",&n);
+    int n;
+    cin>>n;
     int a[n];
-    for(i=0;i<n;i++)
+    for(int i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        cin>>a[i];
     }
-    for(i=0;i<n;i++)
+    sort(a,a+n);
+    for(int i=0;i<n;i++)
     {
-        if(a[i]%2==0)
-        {
-            printf("%d ",a[i]);
-        }
-    }
-    for(i=0;i<n;i++)
-    {
-        if(a[i]%2==1)
-        {
-            printf("%d ",a[i]);
-        }
+        cout<<a[i]<<" ";
     }
 }
