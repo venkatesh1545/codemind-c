@@ -1,9 +1,8 @@
-#include<stdio.h>
+#include<bits/stdc++.h>
+using namespace std;
 int main()
 {
     int n;
-    float a;
-    scanf("%d",&n);
-    a=3.14*n*n;
-    printf("%0.2f",a);
+    cin>>n;
+    cout<<fixed<<setprecision(2)<<3.14*n*n;
 }
