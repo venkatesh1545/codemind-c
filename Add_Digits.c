@@ -1,25 +1,22 @@
-#include<stdio.h>
+#include<bits/stdc++.h>
+using namespace std;
 int main()
 {
-    int n,i,sum=0,r;
-    scanf("%d",&n);
-    do
+    int digits,n;
+    cin>>n;
+    digits=log10(n)+1;
+    int temp;
+    while(digits>=2)
     {
-        sum=0;
-        do
+        temp=0;
+        while(n!=0)
         {
-            r=n%10;
-            sum=sum+r;
+            int r=n%10;
+            temp=temp+r;
             n=n/10;
-         }
-         while(n!=0);
-         {
-            n=sum;
-         }
-    }     
-    while(sum/10!=0);
-    {
-        printf("%d",sum);
+        }
+        n=temp;
+        digits=log10(temp)+1;
     }
-    return 0;
+    cout<<temp<<endl;
 }
